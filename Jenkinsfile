@@ -10,9 +10,8 @@ pipeline {
 
         stage('Build') {
             steps {
-                // Run Maven build without tests
+                // Run Maven build without tests, corrected typo in '-DskipTests'
                 bat 'mvn clean package -DskipTests'
-
             }
         }
 
@@ -36,6 +35,7 @@ pipeline {
             }
         }
     }
+
     post {
         always {
             // Clean up the workspace to free space after the build and test are done
