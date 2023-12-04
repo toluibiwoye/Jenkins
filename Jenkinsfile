@@ -1,44 +1,18 @@
 pipeline {
-    agent any
+    agent any // This tells Jenkins to use any available agent to run the pipeline
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/toluibiwoye/Jenkins.git'
+                // Checks out the source code from remote repository
+                git 'https://github.com/toluibiwoye/Jenkins'
             }
         }
 
         stage('Build') {
             steps {
-                // Run Maven build without tests
-                sh 'mvn clean package -DskipTests'
+            sh 'mvn clean install' // command to build project
             }
-        }
-
-        stage('Test') {
-            steps {
-                // Run JUnit tests with Maven
-                sh 'mvn test'
-            }
-            post {
-                // This block runs after the steps in the 'Test' stage
-                always {
-                    // Archive the JUnit test results
-                    junit '**/target/surefire-reports/*.xml'
-                }
-                success {
-                    echo 'Tests passed!'
-                }
-                failure {
-                    echo 'Tests failed!'
-                }
-            }
-        }
-    }
-    post {
-        always {
-            // Clean up the workspace to free space after the build and test are done
-            cleanWs()
         }
     }
 }
