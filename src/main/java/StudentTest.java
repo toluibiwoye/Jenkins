@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Created by meudec on 15/02/2017..
+ * Created by meudec on 15/02/2017...
  */
 public class StudentTest {
     @Test
@@ -18,17 +18,13 @@ public class StudentTest {
     @Test
     public void muchBelowZero(){
         Student std = new Student();
-        assertThrows(IllegalArgumentException.class, () -> {
-            std.getAttendanceGrade(-42);
-        });
+        assertThrows(IllegalArgumentException.class, () -> std.getAttendanceGrade(-42));
     }
 
     @Test
     public void above100() {
         Student std = new Student();
-        assertThrows(IllegalArgumentException.class, () -> {
-            std.getAttendanceGrade(101);
-        });
+        assertThrows(IllegalArgumentException.class, () -> std.getAttendanceGrade(101));
     }
 
     @Test
