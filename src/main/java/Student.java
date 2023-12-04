@@ -14,14 +14,15 @@ public class Student {
             return AttendanceGrade.ABSENT;
         } else if (attendance < 30) {
             return AttendanceGrade.VERY_POOR;
-        } else if (attendance < 50) {
-            return AttendanceGrade.POOR;
-        } else if (attendance < 70) {
+        } else if (attendance >= 30 && attendance < 70) { // Changed from < 50 to >= 30
             return AttendanceGrade.AVERAGE;
-        } else if (attendance < 90) {
+            // Since I adjusted the average range, we now start 'GOOD' from 70
+        } else if (attendance >= 70 && attendance < 90) {
             return AttendanceGrade.GOOD;
+            // 'VERY_GOOD' starts from 90 and includes 100
         } else {
             return AttendanceGrade.VERY_GOOD;
         }
     }
 }
+
