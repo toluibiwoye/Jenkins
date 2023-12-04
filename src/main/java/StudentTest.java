@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Created by meudec on 15/02/2017.
+ * Created by meudec on 15/02/2017..
  */
 public class StudentTest {
     @Test
