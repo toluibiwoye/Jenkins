@@ -11,14 +11,15 @@ pipeline {
         stage('Build') {
             steps {
                 // Run Maven build without tests
-                sh 'mvn clean package -Dsk ipTests'
+                bat 'mvn clean package -DskipTests'
+
             }
         }
 
         stage('Test') {
             steps {
                 // Run JUnit tests with Maven
-                sh 'mvn test'
+                bat 'mvn test'
             }
             post {
                 // This block runs after the steps in the 'Test' stage
