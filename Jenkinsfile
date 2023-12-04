@@ -11,7 +11,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Run Maven build without tests
-                sh 'mvn clean package -DskipTests'
+                sh 'mvn clean package -Dsk ipTests'
             }
         }
 
