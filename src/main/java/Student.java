@@ -19,7 +19,7 @@ public class Student {
             // Since I adjusted the average range, we now start 'GOOD' from 70
         } else if (attendance >= 70 && attendance < 90) {
             return AttendanceGrade.GOOD;
-            // 'VERY_GOOD' starts from 90 and includes 100
+            // 'VERY_GOOD' starts from 90 and includes 100.
         } else {
             return AttendanceGrade.VERY_GOOD;
         }
