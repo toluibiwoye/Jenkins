@@ -15,13 +15,13 @@
 
     <dependencies>
         <!-- JUnit Jupiter (JUnit 5) API Dependency -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.10.0</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- JUnit Jupiter Engine Dependency -->
+         <dependency>
+             <groupId>org.junit.jupiter</groupId>
+             <artifactId>junit-jupiter-api</artifactId>
+             <version>5.7.0</version> 
+             <scope>test</scope>
+         </dependency>
+r Engine Dependency -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
