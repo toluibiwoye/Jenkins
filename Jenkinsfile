@@ -19,8 +19,10 @@ pipeline {
 
         stage('Test') {
             steps {
-                // Run JUnit tests with Maven
-                bat 'mvn test'
+                // Set the Maven tool
+                def mvnHome = tool 'M3'
+                // Run JUnit tests with Maven using the tool
+                bat "\"${mvnHome}\\bin\\mvn\" test"
             }
             post {
                 // This block runs after the steps in the 'Test' stage
